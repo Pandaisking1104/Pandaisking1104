@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Domain Detector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" class="logo">
+        </div>
+        <div class="buttons">
+            <button onclick="goToPage('about.html')">About Us</button>
+            <button onclick="goToPage('statistics.html')">Statistics</button>
+            <button onclick="goToPage('contact.html')">Contact</button>
+        </div>
+    </header>
+    <div class="background">
+        <div class="container">
+            <h1>Phishing Domain Detector</h1>
+            <input type="text" id="domainInput" placeholder="Enter domain name">
+            <button onclick="detectPhishing()">Detect</button>
+            <!-- Use safe filter to escape HTML content -->
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Phishing Domain Detector. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

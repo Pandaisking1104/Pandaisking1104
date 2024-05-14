@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 200px;
+}
+
+.buttons button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.buttons button:hover {
+    background-color: #0056b3;
+}
+
+.background {
+    background-image: url('https://cdn.pixabay.com/photo/2016/11/19/17/42/hacker-1839879_960_720.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 605px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    min-height: calc(100vh - 70px);
+}
+
+.container input{
+    position: relative;
+    top: 90px;
+    width: 200px;
+}
+
+.container button{
+    position: relative;
+    top: 90px;
+    height: 23px;
+}
+
+.statistics-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.statistics {
+    flex-basis: calc(50% - 10px);
+}
+
+.statistics h2 {
+    position: relative;
+    left: -144px;
+}
+
+.statistics img {
+    width: 400px;
+    position: relative;
+    left: -162px;
+}
+
+.statistics2 {
+    flex-basis: calc(50% - 10px);
+}
+
+.statistics2 h2 {
+    position: relative;
+    left: 16px;
+}
+
+.statistics2 img {
+    width: 400px;
+}
+
+
+.heatmap {
+    margin-top: 40px;
+}
+
+.heatmap img {
+    width: 605px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
