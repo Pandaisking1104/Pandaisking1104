@@ -24,13 +24,37 @@
             <h1>Phishing Domain Detector</h1>
             <input type="text" id="domainInput" placeholder="Enter domain name">
             <button onclick="detectPhishing()">Detect</button>
-            <!-- Use safe filter to escape HTML content -->
+            <div id="predictionResult"></div> <!-- This is where the prediction result will be displayed -->
         </div>
     </div>
     <footer>
         <p>&copy; 2024 Phishing Domain Detector. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
+
+    <script>
+    function detectPhishing() {
+        // Get the domain input value
+        var domain = document.getElementById('domainInput').value;
+
+        // Make a POST request to Flask backend
+        fetch('/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ domain: domain }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Update the webpage with the prediction result
+            document.getElementById('predictionResult').innerText = 'Prediction: ' + data.result;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+    </script>
 </body>
 
 </html>
