@@ -35,6 +35,8 @@ def index():
             # Perform further processing if domain is valid
             features_df = extract_features(domain)  # Assuming extract_features function is defined elsewhere
             result = predict_phishing(features_df)  # Assuming predict_phishing function is defined elsewhere
+            
+            # Return the prediction result
             return jsonify({'result': result})
         else:
             return jsonify({'error': 'Invalid domain format'}), 400
